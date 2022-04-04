@@ -7,8 +7,9 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Home Version One || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
-        <meta name="description" content="">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content=" {% block description %}{% endblock  %} ">
+        <meta name="keyword" content=" {% block keyword %}{% endblock  %} ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="{%static ''%}images/favicon.png">
@@ -55,14 +56,17 @@
             <!-- Begin Header Area -->
           
             <!-- Header Area End Here -->
-            {% include "header.html" %}
+            {% comment %} {% include "header.html" %} {% endcomment %}
+            {% block header %}{% endblock  %}
+            {% block sidebar %}{% endblock  %}
+            {% block slider %}{% endblock  %}
 
 {% comment %} main body here {% endcomment %}
            {%block mainbody%}
            
            {%endblock%}
             <!-- Begin Footer Area -->
-          {% include 'footer.html' %}
+            {% block footer %}{% endblock  %}
             <!-- Footer Area End Here -->
            
         </div>
