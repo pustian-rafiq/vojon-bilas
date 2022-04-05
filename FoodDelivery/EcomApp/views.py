@@ -1,6 +1,11 @@
 from django.shortcuts import render
-#email:rafiqul.pust.cse@gmail.com pass:rafiq123
+from EcomApp.models import Setting
+
+
+#For Admin: email:rafiqul.pust.cse@gmail.com pass:rafiq123
 # Create your views here.
+
 def Home(request): 
-    context={}
+    setting = Setting.objects.get(id=1)
+    context={'setting': setting}
     return render(request, 'home.html',context)

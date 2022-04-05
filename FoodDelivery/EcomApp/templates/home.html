@@ -2,8 +2,12 @@
  {%load static %}
 
     {% block title %}
-       Food Delivery App
+      {{ setting.title }}
     {% endblock  %}
+    {% block title %}
+      {{ setting.description }}
+    {% endblock  %}
+
     {% block header %}
         {% include 'header.html' %}
     {% endblock  %}
