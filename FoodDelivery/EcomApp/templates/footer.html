@@ -81,15 +81,15 @@
                         <ul class="des">
                             <li>
                                 <span>Address: </span>
-                                6688Princess Road, London, Greater London BAS 23JK, UK
+                                {{ setting.address }}
                             </li>
                             <li>
                                 <span>Phone: </span>
-                                <a href="#">(+123) 123 321 345</a>
+                                <a href="#">(+88){{ setting.phone }}</a>
                             </li>
                             <li>
                                 <span>Email: </span>
-                                <a href="mailto://info@yourdomain.com">info@yourdomain.com</a>
+                                <a href={{ setting.email }}>{{ setting.email }}</a>
                             </li>
                         </ul>
                     </div>
@@ -322,7 +322,7 @@
                                     <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
                                     <div class="product-social-sharing pt-25">
                                         <ul>
-                                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                            <li class="facebook"><a href={{ setting.facebook }}><i class="fa fa-facebook"></i>Facebook</a></li>
                                             <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
                                             <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
                                             <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
