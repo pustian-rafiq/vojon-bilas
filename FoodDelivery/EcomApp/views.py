@@ -7,7 +7,7 @@ from Product.models import Product
 
 def Home(request): 
     setting = Setting.objects.get(id=1)
-    slider_images = Product.objects.all()
+    slider_images = Product.objects.all().order_by("id")[:2]
     context={
         'setting': setting,
         'slider_images': slider_images,
