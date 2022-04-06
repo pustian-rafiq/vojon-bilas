@@ -8,8 +8,11 @@ from Product.models import Product
 def Home(request): 
     setting = Setting.objects.get(id=1)
     slider_images = Product.objects.all().order_by("id")[:2]
+    latest_products = Product.objects.all().order_by("-id")
+    
     context={
         'setting': setting,
         'slider_images': slider_images,
+        "latest_products": latest_products,
         }
     return render(request, 'home.html',context)
