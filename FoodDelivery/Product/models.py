@@ -54,6 +54,9 @@ class Product(models.Model):
             return self.image.url
         else:
             return ""
+    def get_absolute_url(self):
+        return reverse("product_element", kwargs={"slug": self.slug})
+    
     def image_tag(self):
         return mark_safe('<img src="{}" heights="70" width="60" />'.format(self.image.url))
     image_tag.short_description = 'Image'

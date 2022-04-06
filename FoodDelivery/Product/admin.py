@@ -19,6 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_per_page = 10
     search_fields = ['title','new_price','detail']
     inlines = [productImageInline]
+    prepopulated_fields = {"slug": ("title",)}
 
 
 admin.site.register(Product,ProductAdmin)
